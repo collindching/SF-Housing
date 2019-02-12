@@ -1,0 +1,112 @@
+Visualizing San Francisco's Housing Market with Zillow Data
+
+Final recommendations: would I be willing to put my money where my mouth is?
+
+Trying to look for key insights for prospective homeowners and renters in San Francisco. Ultimately, want to make a decision about when and where to rent. 
+
+Questions:
+• How has San Francisco gotten more expensive over time?
+• What neighborhoods are there with higher potential value?
+• What is a good neighborhood for someone like me?
+	- Want up-and-coming, hip with accessibility to lots of restaurants
+
+Hypotheses:
+• San Francisco
+
+
+Data requirements:
+
+• neighborhood maps
+	- boxplots to show median cost (get high level overview of housing market) by neighborhood
+	- then boxplots to show median cost by district
+
+• neighborhood price change over time
+	- geographic and boxplots
+	- and also percentage change with box plots
+
+• where to buy or when to buy?
+	- effect of seasonality on home purchasing
+	- appears to be little variation from 
+	
+• where to rent?
+	- effect of seasonality on renting (cheap apartments in winter, most choices in summer)
+
+housing economics
+
+
+Questions I'm curious about:
+how could businesses fit in?
+
+Proposal: 
+
+If I were to find my own place in San Francisco on a new grad salary, could I find a place to live comfortably? I would like to pull data from various sources to analyze areas with the optimal combination cost, safety, and convenience for people in their 20s and 30s.
+
+Would this be useful to me? Yes.
+	Perhaps I might find something interesting out about San Francisco housing.
+	Or I could at least learn about the different districts.
+
+
+Questions to answer:
+
+Where are people living?
+Where are people moving.
+Where would I want to live?
+Where would a young family want to live?
+
+
+Another possibility:
+
+Track the changes in businesses in the area. 
+
+Mapping gentrification: follow how gentrification has changed home prices, businesses, etc.
+(http://urbanspatialanalysis.com/dataviz-tutorial-mapping-san-francisco-home-prices-using-r/). Explore rapid neighborhood change that has occurred in San Francisco by constructing time series plots and point and polygon maps.
+
+Differences between rent and home prices as well
+
+You can also trace wealth in San Francisco to compare
+
+Fundamental question: is gentrification good or bad?
+
+
+Rent vs buy
+Buy
+	When to buy
+	Where to buy
+		If you're trying to purchase as investment (renting out)
+		Living for convenience
+		Planning to have family?
+
+Rent
+	Where to buy
+		Convenience
+
+
+can send to sf curbed
+
+https://sf.curbed.com/2018/10/4/17781096/san-francisco-neighborhoods-where-to-live-advice
+	- Nearly 40% of San Franciscans are rent-burdened
+	- Zumper and Rent Cafe break down median rent in neighborhoods on their respective sites
+	- Paragon has a map of home prices in neighborhoods
+	- Know neighborhood’s reputation: Castro LGBT, Noe Valley for fams, Pacific Heights for nice architecture, and Sunset/Richmond/Chinatown for immigrants
+	- Bart key
+	- Find place near job
+	- Live near parks?
+	- Waterfront views
+	- Ingleside, Excelsior, Monterey Heights, or India Basin
+	- Topography?
+	- Weather, microclimates
+	- Restaurants
+
+https://sf.curbed.com/2015/6/3/9953688/the-curbed-guide-to-san-francisco-neighborhoods-as-told-by-locals
+	- 119 neighborhoods
+
+https://data.sfgov.org/Geographic-Locations-and-Boundaries/Realtor-Neighborhoods/5gzd-g9ns
+	- sf neighborhood shapefiles, realtors
+
+Zillow, Redfin data, Realtor, Quandl
+
+- took data from Zillow, 
+- ditched sales_cali because it was missing many neighborhoods
+- stick with zhvi_sf for now
+- reshaped data from wide to long and back to create appropriate appropriate aggregates and data format for mapping
+- made unique map, learned to repel text on plots
