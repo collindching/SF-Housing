@@ -36,7 +36,7 @@ library(gridExtra)
 library(maptools)
 library(scales)
 library(sf)
-source("../functions.R")
+source("../workflow/functions.R")
 
 ## smoothed median home price dataset
 zhvi <- read.csv("../data/zillow/Neighborhood_Zhvi_AllHomes.csv",stringsAsFactors=FALSE)
@@ -600,7 +600,7 @@ grid.arrange(low_ptr.boxplot,low_ptr.map,nrow=1)
 #ggsave("../graphics/fig7.png",width=10,height=4.9)
 ```
 
-Bayview is has historically high crime rates, but has grown \$400k in average home price from \$500k to \$900k based on Trulia data. There are coffee shops and eateries sprouting up in that area that cater to young professionals, making it a more accessible neighborhood with a cheaper price tag. It looks like it takes roughly under 16 years to pay off a rental purchase in that area. That's as good as it gets in the city, and real estate property in Bayview is appreciating quickly, meaning higher selloff value. 
+Bayview has historically high crime rates, but has grown \$400k in average home price from \$500k to \$900k based on Trulia data. There are coffee shops and eateries sprouting up in that area that cater to young professionals, making it a more accessible neighborhood with a cheaper price tag. It looks like it takes roughly under 16 years to pay off a rental purchase in that area. That's as good as it gets in the city, and real estate property in Bayview is appreciating quickly, meaning higher selloff value. 
 
 Next, we will look at change over time. 
 
