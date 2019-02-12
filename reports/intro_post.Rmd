@@ -630,7 +630,7 @@ I didn't have much time to go in-depth in this analysis, but I'll probably exten
 - graph rent per square feet to find apartments that provide more space for less money
 - think about looking at densities of nearby restaurants because convenience is important
 
-Learning how to map was probably the hardest part about this project. I studied the Urban Spatial for several days, and stepped through the code slowly. Learning how geom_polygon() was helpful. Shapes are drawn in geom_polygon() by connecting points using the "group" aesthetic. 
+Learning how to map was probably the hardest part about this project. I studied the Urban Spatial for several days, and stepped through the code slowly. Learning how geom_polygon() worked was helpful. The function draws polygons by connecting points using the "group" aesthetic.
 
 Feedback? Drop a comment or dm! 
 
