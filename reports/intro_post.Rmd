@@ -4,7 +4,7 @@ author: "By Collin Ching"
 output:
   pdf_document: default
   html_document: default
-subtitle: Choosing a neighobrhood with Zillow Data
+subtitle: Maximizing housing value in the world's most expensive city with Zillow data
 editor_options:
   chunk_output_type: inline
 ---
@@ -15,11 +15,11 @@ library(knitr)
 opts_chunk$set(warning=FALSE,message=FALSE)
 ```
 
-Moving to San Francisco would be awesome except for the cost of rent.
+There's plenty to love about San Francisco… except rent is so damn expensive. Depending on your desired housing situation, it's important to maximize the value you're getting. As a prospective renter, you want the nicest apartment you can get for your budget; as a homeowner, you want to maximize your house's market value for the price you pay.
 
-In this project, I explore neighborhoods through [Zillow data](https://www.zillow.com/research/data/) to find rental opportunities in San Francisco. The following analysis was scripted in R, and analysis is neighborhood-based.
+I used [Zillow data](https://www.zillow.com/research/data/) in this project to find good value in San Francisco's housing market. Everything is scripted in R.
 
-Credit goes to Ken Steif and Keith Hassel for their [great tutorial](http://urbanspatialanalysis.com/dataviz-tutorial-mapping-san-francisco-home-prices-using-r/) for exploring home prices in San Francisco. I used their ggplot themes for my graphics.
+Thanks to Ken Steif and Keith Hassel for their [great tutorial](http://urbanspatialanalysis.com/dataviz-tutorial-mapping-san-francisco-home-prices-using-r/) on exploring home prices in San Francisco. They inspired the following plots and graphics.
 
 ```{r Load,message=FALSE}
 ## load libraries and local files
@@ -288,7 +288,7 @@ basemap <- get_stamenmap(
 
 # Neighborhood reference
 
-My analysis is done with respect to neighborhoods, so a visual reference of San Francisco's neighborhoods and districts is helpful.
+Since my analysis is done with respect to neighborhoods, here's a visual reference.
 
 ```{r,fig.width=9,fig.height=9}
 neighb_centroids <- neighb_pts %>%
@@ -600,7 +600,9 @@ grid.arrange(low_ptr.boxplot,low_ptr.map,nrow=1)
 #ggsave("../graphics/fig7.png",width=10,height=4.9)
 ```
 
-Bayview has historically high crime rates, but has grown \$400k in average home price from \$500k to \$900k based on Trulia data. There are coffee shops and eateries sprouting up in that area that cater to young professionals, making it a more accessible neighborhood with a cheaper price tag. It looks like it takes roughly under 16 years to pay off a rental purchase in that area. That's as good as it gets in the city, and real estate property in Bayview is appreciating quickly, meaning higher selloff value. 
+Bayview has historically high crime rates, but has grown \$400k in average home price from \$500k to \$900k based on Trulia data. There are coffee shops and eateries sprouting up in that area that cater to young professionals, making it an increasingly accessible neighborhood with a (relatively) cheap price tag. 
+
+It looks like it takes roughly under 16 years to pay off a rental purchase in that area. That's as good as it gets in the city, so consider starting your investment search there.
 
 Next, we will look at change over time. 
 
@@ -622,17 +624,17 @@ Looking at change over time, we see that Downtown actually has the lowest curren
 
 # Conclusion
 
-We identified a few good starting neighborhoods to look to rent in from a value perspective. Consider starting with Saint Francis Wood, Sea Cliff, and Presidio Heights. From a buyer's perspective, Bayview, Visitacion Valley, Downtown are good neighborhoods for purchasing rental properties.
+To recap, we've identified neighborhoods that provide high values for renters, and high returns to prospective landlords. If you're looking to rent, a few good start your search with Saint Francis Wood, Sea Cliff, and Presidio Heights. These are affluent and safe neighborhoods and you'll be surprised to see some affordable rental candidates.
 
-I didn't have much time to go in-depth in this analysis, but I'll probably extend this in the future. Things I'll consider in future analysis:
+If you're looking to buy property and rent it out, you want to earn back your investment as quickly as possible. Bayview, Visitacion Valley, and Downtown offer the best return on investment for rental property estates.
 
-- look at 3- and 4-bedroom apartments (more rooms tend to be cheaper)
-- graph rent per square feet to find apartments that provide more space for less money
-- think about looking at densities of nearby restaurants because convenience is important
+This post is just one approach to thinking about housing in San Francisco. I plan to extend the housing market analysis by focusing on specific house types, examining general trends about San Francisco's housing market, and comparing housing markets in different cities.
 
-Learning how to map was probably the hardest part about this project. I studied the Urban Spatial for several days, and stepped through the code slowly. Learning how geom_polygon() worked was helpful. The function draws polygons by connecting points using the "group" aesthetic.
+And a note for those interested in making these graphs in R: learning how to map the neighborhoods was the trickiest part of this project. I recommend studying Ken Steif and Keith Hassel's tutorial (linked above) carefully. And learning how geom_polygon() works is super helpful.
 
-Feedback? Drop a comment or dm! 
+If you made it this far, thanks for reading! I hope you found this interesting or helpful.
+
+Please comment or message me feedback/constructive criticism. Always looking to improve!
 
 # Appendix
 
