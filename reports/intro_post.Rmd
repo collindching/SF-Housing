@@ -15,9 +15,9 @@ library(knitr)
 opts_chunk$set(warning=FALSE,message=FALSE)
 ```
 
-There's plenty to love about San Francisco… except rent is so damn expensive. Depending on your desired housing situation, it's important to maximize the value you're getting. As a prospective renter, you want the nicest apartment you can get for your budget; as a homeowner, you want to maximize your house's market value for the price you pay.
+There’s plenty to love about San Francisco… except for the cost of living. Housing is a big chunk of that, so it’s important to get the most value out of your housing situation whether you’re a renter or homeowner.
 
-In this project, I explore [Zillow data](https://www.zillow.com/research/data/) in R to identify high-value neighborhoods in San Francisco's housing market.
+In this project, I explore [Zillow data](https://www.zillow.com/research/data/) in R to identify high-value neighborhoods for 1) prospective renters and 2) people looking to buy rental. We’ll explore home prices, monthly rent, and a ratio of the two--price-to-rent--to find candidate neighborhoods.
 
 Thanks to Ken Steif and Keith Hassel for their [great tutorial](http://urbanspatialanalysis.com/dataviz-tutorial-mapping-san-francisco-home-prices-using-r/) on exploring home prices in San Francisco. They inspired the following plots and graphics.
 
