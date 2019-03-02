@@ -335,8 +335,9 @@ ggmap(basemap) + coord_map() +
 #ggsave("../graphics/fig2.png",width=10,height=6)
 ```
 
-First, neighborhood home prices are stagnant between 2007 and 2011 due to the subprime mortgage crisis. In Southeast the Shipyard, housing prices even decrease during this time period.
+Neighborhood home prices are stagnant between 2007 and 2011 due to the subprime mortgage crisis. In the Shipyard, housing prices even decrease during this time period.
 
+From 2012 onwards, housing prices take off. This rise in housing grows in the center of San Francisco, then propagates outwards. Housing is consistently most expensive near the Presidio and Twin Peaks areas.
 
 ```{r,fig.width=8,fig.height=5}
 ggplot(filter(sf_housing_pts.yearly,year>=2007)) + 
@@ -444,11 +445,11 @@ ggplot(filter(sf_housing.yearly,year>=2010),aes(x=round(price_to_rent,1))) +
 
 These are average neighborhood price-to-rent ratios from 2010 to 2018, where price-to-rent ratio is $$\frac{\text{home price}}{12\times \text{monthly rent}}$$. 
 
-Price-to-rent is home price divided by a years estimated rent. You can view it as the estimated years to pay off a rental property. Maximizing this ratio would give renters good value; minimizing this ratio (fewer years to payoff) would give landlords good returns.
+Price-to-rent is home price divided by a year's estimated rent. You can view it as the estimated years to payoff rental property. Maximizing this ratio would give renters good value; minimizing this ratio (fewer years to payoff) would give landlords good returns.
 
-If you're renting an apartment, you want to maximize price-to-rent. These neighborhoods have higher bang for rental buck. Highest 10% neighborhoods are marked in the right panel.
+If you’re renting an apartment, you want to maximize price-to-rent. These neighborhoods have higher bang for rental buck. Highest 10% neighborhoods are marked in the right panel.
 
-If you're investing in rental property, you want to minimize price-to-rent so you get quick returns on investment. Lowest 10% price-to-rent neighborhoods are marked in the left.
+If you’re investing in rental property, you want to minimize price-to-rent so you get quick returns on investment. Lowest 10% price-to-rent neighborhoods are marked in the left.
 
 ```{r,fig.width=10,fig.height=4.85}
 ptr_quartiles <- quantile(sf_housing.yearly$price_to_rent[sf_housing.yearly$year>=2010],
@@ -526,7 +527,7 @@ grid.arrange(high_ptr.boxplot,high_ptr.map,nrow=1)
 #ggsave("../graphics/fig6.png",fig6,width=10,height=4.85)
 ```
 
-Saint Francis Wood, Sea Cliff, and Presidio Heights are high value neighborhoods to rent in. Because they are affluent neighborhoods, home values are likely to be higher in those neighobrhoods. If you can find reasonable rent in these areas, you're probably getting high value from this renting situation. 
+Saint Francis Wood, Sea Cliff, and Presidio Heights are high value neighborhoods to rent in. Because they're affluent neighborhoods, home values are likely to be higher in those neighobrhoods. If you can find reasonable rent in these areas, you're probably getting high value from this renting situation. 
 
 As a sanity check, I found nice Craigslist listings in Saint Francis Wood and Presidio for about $1500/br, and the apartments looked nice. That's super reasonable for the area. 
 
@@ -624,7 +625,7 @@ Looking at change over time, we see that Downtown actually has the lowest curren
 
 # Conclusion
 
-To recap, we've identified neighborhoods that provide high values for renters, and high returns to prospective landlords. If you're looking to rent, a few good start your search with Saint Francis Wood, Sea Cliff, and Presidio Heights. These are affluent and safe neighborhoods and you'll be surprised to see some affordable rental candidates.
+To recap, we've identified neighborhoods that provide high values for renters, and high returns to prospective landlords. If you're looking to rent, start your search with Saint Francis Wood, Sea Cliff, and Presidio Heights. These are affluent and safe neighborhoods and you'll be surprised to see some affordable rental candidates.
 
 If you're looking to buy property and rent it out, you want to earn back your investment as quickly as possible. Bayview, Visitacion Valley, and Downtown offer the best return on investment for rental property estates.
 
