@@ -8,3 +8,5 @@ Helpful blog posts:
 Data from Zillow. The writeup with code is in reports/intro_post.pdf.
 
 ## How to run this project
+
+To run this code, download the repo and create an R project in the directory. You can step through all the code through intro_post.Rmd.
