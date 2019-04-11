@@ -2,8 +2,10 @@
 
 In this project, I explored San Francisco's housing market with Zillow data to practice spatial data visualizations and learn more about the area I grew up in. 
 
-Check out my code and writeup in reports/intro_post.pdf.
+My full report is in reports/intro_post.pdf.
+
+To run the file, go to reports/intro_post.Rmd.
 
 ## How to run this project
 
-To run this code, download the repo and create an R project in the directory. The complete code is in reports/intro_post.Rmd, and you can step through that to see everything.
+(update docs)
