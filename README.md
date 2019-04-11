@@ -1,13 +1,8 @@
 # San Francisco Housing Project
 
-Which neighborhoods are good for renting and which are good for buying? 
+In this project, I explored San Francisco's housing market with Zillow data to practice spatial data visualizations and learn more about the area I grew up in. 
 
-I explored San Francisco's housing market with Zillow data to practice spatial data visualizations and learn more about the area I grew up in. 
-
-Helpful blog posts:
-- [San Francisco mapping tutorial](http://urbanspatialanalysis.com/dataviz-tutorial-mapping-san-francisco-home-prices-using-r/)
-
-The writeup with code is in reports/intro_post.pdf.
+Check out my code and writeup in reports/intro_post.pdf.
 
 ## How to run this project
 
