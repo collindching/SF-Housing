@@ -1,5 +1,5 @@
 # San Francisco Housing Project
 
-An exploration of San Francisco's housing market in which I try to maximize value from a prospective renter's and buyer's perspective.
+In this project, I explored Zillow data in R to identify the best areas for renting and buying homes in San Francisco.
 
-Data from Zillow. The writeup with code is in reports/intro_post.pdf.
+Based on this data, I found that up-and-coming neighborhoods like Bayview and Visitacion Valley were the best rental property investments, while affluent neighborhoods like Presidio Heights gave renters the best bang for their buck.
